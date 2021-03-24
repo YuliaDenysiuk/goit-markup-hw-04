@@ -70,19 +70,21 @@ img {
 .grid {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -30px;
-  margin-bottom: -30px;
+  margin-left: -30px;
+  margin-top: -30px;
 }
 
 .grid-item {
   flex-basis: calc((100% - 30px * var(--grid-item)) / var(--grid-item));
-  margin-right: 30px;
-  margin-bottom: 30px;
+  margin-left: 30px;
+  margin-top: 30px;
 }
 
 /* Header */
 
 header {
+  padding-top: 32px;
+  padding-bottom: 32px;
   border-bottom: 1px solid var(--header-border-color);
 }
 
@@ -129,8 +131,8 @@ header {
 .nav-link,
 .contact-link {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 
   font-weight: 500;
   font-size: 14px;
