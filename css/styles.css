@@ -322,6 +322,15 @@ header {
   padding-bottom: 60px;
 }
 
+.footer-section {
+  display: flex;
+  align-items: baseline;
+}
+
+.address-section {
+  margin-right: 70px;
+}
+
 .address {
   margin-top: 20px;
 
@@ -342,11 +351,21 @@ header {
   color: var(--accent-color);
 }
 
-.social-links-title {
+.social-links {
+  margin-bottom: 20px;
+
   text-transform: uppercase;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
+}
+
+.social-link {
+  display: inline-block;
+}
+
+.social-link:not(:last-child) {
+  margin-right: 10px;
 }
 
 .social-link::before {
