@@ -10,7 +10,6 @@
   --logo-color: #130d0d;
   --header-border-color: #ececec;
   --border-color: #eeeeee;
-  --social-links-color: rgba(255, 255, 255, 0.1);
   --grid-item: 1;
 }
 
@@ -133,10 +132,6 @@ header {
 
 .nav-link,
 .contact-link {
-  display: block;
-  padding-top: 16px;
-  padding-bottom: 16px;
-
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -144,6 +139,10 @@ header {
 }
 
 .nav-link {
+  display: block;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
   color: var(--title-color);
 }
 
@@ -153,6 +152,16 @@ header {
 .contact-link:focus,
 .nav-link.current {
   color: var(--accent-color);
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+}
+
+.contact-icon {
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 /*Страница Студия*/
@@ -218,32 +227,16 @@ header {
   --grid-item: 4;
 }
 
-.benefits-item::before {
-  content: '';
-  display: block;
+.benefits-icon {
+  display: flex;
   height: 120px;
-  background-color: var(--second-bg-color);
-  border-radius: 4px;
-  background-repeat: no-repeat;
-  background-size: 70px 70px;
-  background-position: center;
+  width: 100%;
   margin-bottom: 30px;
-}
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
 
-.item-antenna::before {
-  background-image: url(../images/studio/antenna.svg);
-}
-
-.item-clock::before {
-  background-image: url(../images/studio/clock.svg);
-}
-
-.item-diagram::before {
-  background-image: url(../images/studio/diagram.svg);
-}
-
-.item-astronaut::before {
-  background-image: url(../images/studio/astronaut.svg);
+  background-color: var(--second-bg-color);
 }
 
 .benefits-title {
@@ -309,6 +302,47 @@ header {
   color: var(--title-color);
 }
 
+.socail-links-list {
+  display: flex;
+}
+
+.social-links-item {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-links-item:hover,
+.social-links-item:focus {
+  background-color: var(--accent-color);
+}
+
+/* .social-links-list {
+  display: flex;
+} */
+
+/* .social-link:not(:last-child) {
+  margin-right: 10px;
+} */
+
+/* .social-link::before {
+  content: '';
+  display: block;
+  height: 44px;
+  width: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  background-repeat: no-repeat;
+  /* background-size: 20px 20px; */
+  background-position: center;
+  border-radius: 50%;
+} */
+
+
+
+
 /* Footer */
 
 .dark-bg,
@@ -345,16 +379,14 @@ header {
   margin-top: 9px;
 }
 
-.contacts .link {
+.contact-item > .contact-link {
+  font-weight: 400;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
 
-.contacts .link:hover,
-.contacts .link:focus {
-  color: var(--accent-color);
-}
-
-.social-links {
+.strong {
   display: block;
   margin-bottom: 20px;
 
@@ -362,51 +394,6 @@ header {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-}
-
-.social-links-list {
-  display: flex;
-}
-
-/* .social-link {
-  display: inline-flex;
-} */
-
-.social-link:not(:last-child) {
-  margin-right: 10px;
-}
-
-.social-link::before {
-  content: '';
-  display: block;
-  height: 44px;
-  width: 44px;
-  background-color: var(--social-links-color);
-  background-repeat: no-repeat;
-  /* background-size: 20px 20px; */
-  background-position: center;
-  border-radius: 50%;
-}
-
-.social-link:hover::before,
-.social-link:focus::before {
-  background-color: var(--accent-color);
-}
-
-.item-instagram::before {
-  background-image: url(../images/studio/instagram.svg);
-}
-
-.item-twitter::before {
-  background-image: url(../images/studio/twitter.svg);
-}
-
-.item-facebook::before {
-  background-image: url(../images/studio/facebook.svg);
-}
-
-.item-linkedin::before {
-  background-image: url(../images/studio/linkedin.svg);
 }
 
 /*Страница Портфолио*/
@@ -443,6 +430,7 @@ header {
   color: var(--dark-bg-text-color);
   background-color: var(--accent-color);
   border: var(--accent-color);
+  outline: 0px;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
@@ -456,8 +444,13 @@ header {
   background-color: var(--dark-bg-text-color);
 }
 
-.examples-list-item:hover,
-.examples-list-item:focus {
+.example-link {
+  display: block;
+}
+
+.example-link:hover,
+.example-link:focus {
+  outline: 0px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
